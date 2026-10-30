@@ -1,13 +1,16 @@
 # Start SLAM — RTAB-Map external skill
 
-AgenticROS skill that exposes `start_slam`, `stop_slam`, `save_map`, `load_map`, `set_mapping_mode`, and `set_localization_mode` as **external** service capabilities. AgenticROS does **not** launch RTAB-Map — bring it up on the robot, then install this skill.
+This project was previously known as AgenticROS.
 
-This skill does **not** drive the base. Pair it with [`@agenticros/explore`](https://github.com/agenticros/agenticros-skill-explore) to cover a room, then [`@agenticros/navigate-to`](https://github.com/agenticros/agenticros-skill-navigate-to) to go places on the saved map.
+
+Corebrum Synapse skill that exposes `start_slam`, `stop_slam`, `save_map`, `load_map`, `set_mapping_mode`, and `set_localization_mode` as **external** service capabilities. Corebrum Synapse does **not** launch RTAB-Map — bring it up on the robot, then install this skill.
+
+This skill does **not** drive the base. Pair it with [`@corebrum/explore`](https://github.com/Corebrum/corebrum-skill-explore) to cover a room, then [`@corebrum/navigate-to`](https://github.com/Corebrum/corebrum-skill-navigate-to) to go places on the saved map.
 
 ```bash
-npx agenticros skills install @agenticros/start-slam
-# or: npx agenticros skills install chrismatthieu/start-slam
-# or: "skillRefs": ["@agenticros/start-slam"]
+npx @corebrum/synapse skills install @corebrum/start-slam
+# or: npx @corebrum/synapse skills install chrismatthieu/start-slam
+# or: "skillRefs": ["@corebrum/start-slam"]
 ```
 
 ## Capabilities
@@ -56,7 +59,7 @@ Reload a previous database:
 }
 ```
 
-Default service names match common `rtabmap_ros` / `rtabmap_slam` bringups. If your launch file uses different names, fork the skill or edit `agenticros.capabilities[].implementation.service` in `package.json`.
+Default service names match common `rtabmap_ros` / `rtabmap_slam` bringups. If your launch file uses different names, fork the skill or edit `synapse.capabilities[].implementation.service` in `package.json`.
 
 ## Requirements
 
@@ -67,7 +70,7 @@ Default service names match common `rtabmap_ros` / `rtabmap_slam` bringups. If y
 
 ## Operator bringup
 
-See **[Mapping a room](https://github.com/agenticros/agenticros/blob/main/docs/mapping.md)** in the AgenticROS repo (RealSense + RTAB-Map + Nav2, no AMCL).
+See **[Mapping a room](https://github.com/Corebrum/corebrum-synapse/blob/main/docs/mapping.md)** in the Corebrum Synapse repo (RealSense + RTAB-Map + Nav2, no AMCL).
 
 On Jazzy, install the stacks first:
 

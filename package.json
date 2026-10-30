@@ -1,22 +1,22 @@
 {
-  "name": "@agenticros/start-slam",
+  "name": "@corebrum/start-slam",
   "version": "0.2.1",
   "type": "module",
   "description": "External ROS-node skill: start / stop / save / load RTAB-Map (or compatible) SLAM via ROS services.",
   "keywords": [
-    "agenticros",
+    "synapse",
     "ros2",
     "slam",
     "rtabmap",
     "mapping"
   ],
-  "homepage": "https://github.com/agenticros/agenticros-skill-start-slam#readme",
+  "homepage": "https://github.com/Corebrum/corebrum-skill-start-slam#readme",
   "bugs": {
-    "url": "https://github.com/agenticros/agenticros-skill-start-slam/issues"
+    "url": "https://github.com/Corebrum/corebrum-skill-start-slam/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agenticros/agenticros-skill-start-slam.git"
+    "url": "git+https://github.com/Corebrum/corebrum-skill-start-slam.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,10 +29,10 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit"
   },
-  "agenticros": {
+  "synapse": {
     "id": "start-slam",
     "displayName": "Start SLAM",
-    "description": "RTAB-Map mapping lifecycle: resume/pause, database backup/load, and mapping vs localization mode. Bring up rtabmap_ros yourself; AgenticROS only calls the services.",
+    "description": "RTAB-Map mapping lifecycle: resume/pause, database backup/load, and mapping vs localization mode. Bring up rtabmap_ros yourself; Corebrum Synapse only calls the services.",
     "categories": [
       "mapping",
       "navigation"
@@ -214,7 +214,7 @@
     "@types/node": "^20.17.0",
     "typescript": "^5.7.0"
   },
-  "author": "AgenticROS",
+  "author": "Corebrum Synapse",
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"
